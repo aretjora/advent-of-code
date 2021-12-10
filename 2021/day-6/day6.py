@@ -24,8 +24,6 @@ def part2(input, cycles):
 
     for i in range(cycles):
         today = i % len(days)
-
-        # Add new babies
         days[(today + 7) % len(days)] += days[today]
     return sum(days)
 
